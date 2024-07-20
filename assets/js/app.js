@@ -147,6 +147,8 @@ function raf(time) {
 
 requestAnimationFrame(raf)
 
+//GSAP Start
+
 gsap.registerPlugin(ScrollTrigger)
 gsap.defaults({
   ease: 'none'
@@ -277,3 +279,5 @@ gsap.fromTo('.road-bg', { y: '-20%' }, { y: '20%',
     scrub: true
   }
 })
+
+// GSAP End
