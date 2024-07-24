@@ -1041,7 +1041,7 @@ html, body {
 .swaper-verus iframe {
   width: 55%;
   border: 0;
-  filter: grayscale(1);
+  filter: none;
   overflow: hidden;
 }
 
