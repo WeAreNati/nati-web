@@ -80,6 +80,11 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, table, tbo
 	vertical-align: baseline;
 }
 
+.icon-discord {
+  width: 24px;  /* Set the desired width */
+  height: 24px; /* Set the desired height */
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
