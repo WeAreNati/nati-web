@@ -1015,6 +1015,44 @@ html, body {
   cursor: wait;
 }
 
+
+.swaper-verus {
+  padding: 0 0 25px;
+  background-color: var(--bg-body);
+  --mask: linear-gradient(to bottom, #000 90%, transparent 100%);
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  margin-top: var(--marge-secondary);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swaper-verus::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-body);
+  z-index: 10;
+  mix-blend-mode: soft-light;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.swaper-verus iframe {
+  width: 55%;
+  border: 0;
+  filter: grayscale(1);
+  overflow: hidden;
+}
+
+.lenis-scrolling .swaper-verus::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 150;
+  cursor: wait;
+}
+
 /* Tokenomics */
 
 .token {
