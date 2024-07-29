@@ -80,9 +80,15 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, table, tbo
 	vertical-align: baseline;
 }
 
-.icon-discord {
+.icon-discord  {
   width: 10px;  /* Set the desired width */
   height: 10px; /* Set the desired height */
+}
+
+.icon-verus {
+    width: 24px;  /* Set the desired width */
+    height: 24px; /* Set the desired height */
+    fill: currentColor; /* Ensures it inherits the color of the text */
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -779,6 +785,8 @@ html, body {
   font-family: var(--font-family-heading);
   top: .05em;
 }
+
+
 
 /* Icon triangle */
 
