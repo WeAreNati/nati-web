@@ -86,9 +86,17 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, ol, ul, li, table, tbo
 }
 
 .icon-verus {
-    width: 24px;  /* Set the desired width */
-    height: 24px; /* Set the desired height */
-    fill: currentColor; /* Ensures it inherits the color of the text */
+  width: 250px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -827,6 +835,9 @@ html, body {
   transform: scale(2.8) translate(4.7%, 9%);
 }
 
+.icon-triangle.verus use:last-of-type {
+  transform: scale(.8) translate(2%, 2%);
+}
 /* Line hr */
 
 .line-hr {
