@@ -1,0 +1,30 @@
+{
+  "name": "illuminaticoin-rfid-proxy",
+  "version": "1.0.0",
+  "description": "Secure proxy server for Verus Protocol RFID verification",
+  "main": "verus-proxy-server.js",
+  "scripts": {
+    "start": "node verus-proxy-server.js",
+    "dev": "NODE_ENV=development node verus-proxy-server.js",
+    "prod": "NODE_ENV=production node verus-proxy-server.js"
+  },
+  "keywords": [
+    "verus",
+    "rfid",
+    "blockchain",
+    "authentication",
+    "proxy"
+  ],
+  "author": "IlluminatiCoin",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/illuminaticoin/rfid-verification"
+  }
+}

@@ -1,0 +1,629 @@
+/* RFID Verification styles extending the main theme */
+
+/* RFID Main Container */
+.rfid-main {
+  background: var(--bg-body);
+  color: var(--c-primary);
+}
+
+/* RFID Hero Section */
+.rfid-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(var(--bg-body-rgb), 0.95) 0%, rgba(var(--bg-body-rgb), 0.8) 100%),
+              url('../img/naticoin-bg-hero.webp') center/cover;
+}
+
+.rfid-hero-content {
+  text-align: center;
+  z-index: 2;
+}
+
+.rfid-hero-title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.title-accent {
+  color: #ffd700;
+  font-size: 0.8em;
+  vertical-align: middle;
+}
+
+.rfid-hero-subtitle {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: rgba(var(--c-primary-rgb), 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* RFID Verification Section */
+.rfid-verification {
+  padding: var(--marge-primary) 0;
+  min-height: 60vh;
+}
+
+/* Scan Interface */
+.scan-interface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.scan-card {
+  background: rgba(var(--c-primary-rgb), 0.05);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.scan-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: #ffd700;
+}
+
+.scan-card h2 {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.scan-card p {
+  color: rgba(var(--c-primary-rgb), 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.manual-input {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.manual-input h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.input-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.2);
+  border-radius: 8px;
+  background: rgba(var(--c-primary-rgb), 0.05);
+  color: var(--c-primary);
+  font-size: 1rem;
+}
+
+.input-group input::placeholder {
+  color: rgba(var(--c-primary-rgb), 0.5);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 2px rgba(255, 215, 0, 0.2);
+}
+
+/* Identity Search Interface */
+.identity-search-interface {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  margin-top: 2rem;
+}
+
+.search-card {
+  background: rgba(var(--c-primary-rgb), 0.05);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.search-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  color: #ffd700;
+}
+
+.search-card h2 {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.search-card p {
+  color: rgba(var(--c-primary-rgb), 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.identity-input {
+  margin-top: 2rem;
+}
+
+.search-examples {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(var(--c-primary-rgb), 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.search-examples p {
+  font-size: 0.9rem;
+  color: rgba(var(--c-primary-rgb), 0.7);
+  margin-bottom: 0.5rem;
+}
+
+.search-examples ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-examples li {
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.search-examples code {
+  background: rgba(var(--c-primary-rgb), 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  color: var(--c-primary);
+  word-break: break-all;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-link) var(--cubic);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: #ffd700;
+  color: var(--bg-body);
+}
+
+.btn-primary:hover {
+  background: #ffed4e;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(var(--c-primary-rgb), 0.1);
+  color: var(--c-primary);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(var(--c-primary-rgb), 0.2);
+}
+
+/* Loading State */
+.verification-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.loader-content {
+  text-align: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(var(--c-primary-rgb), 0.1);
+  border-left: 4px solid #ffd700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 2rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loader-content h2 {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.loader-content p {
+  color: rgba(var(--c-primary-rgb), 0.8);
+}
+
+/* Verification Results */
+.verification-result {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.verification-success,
+.verification-error {
+  background: rgba(var(--c-primary-rgb), 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.verification-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.verification-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.verification-status.verified {
+  background: rgba(34, 197, 94, 0.1);
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.verification-status.error {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.verification-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Product Details */
+.product-details h2 {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+  text-align: center;
+}
+
+.product-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  flex-wrap: wrap;
+}
+
+.product-meta span {
+  font-weight: 600;
+  color: rgba(var(--c-primary-rgb), 0.9);
+}
+
+.price {
+  color: #ffd700 !important;
+  font-size: 1.2em;
+}
+
+.product-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-item strong {
+  color: var(--c-primary);
+  font-weight: 600;
+}
+
+.info-item span {
+  color: rgba(var(--c-primary-rgb), 0.8);
+}
+
+.mono {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+/* Blockchain Details */
+.blockchain-details {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.blockchain-details h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.blockchain-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.status-active {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+/* Enhanced Identity Display */
+.identity-details h2 {
+  font-family: var(--font-family-heading);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+  text-align: center;
+}
+
+.identity-meta {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  flex-wrap: wrap;
+}
+
+.friendly-name {
+  font-weight: 600;
+  color: #ffd700 !important;
+  font-size: 1.1em;
+}
+
+.identity-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Content Multimap Styles */
+.content-multimap {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.content-multimap h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.multimap-details {
+  background: rgba(var(--c-primary-rgb), 0.03);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.multimap-entry {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(var(--c-primary-rgb), 0.05);
+}
+
+.multimap-entry:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.hex-data {
+  margin-top: 1rem;
+}
+
+.hex-data summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--c-primary);
+  padding: 0.5rem;
+  background: rgba(var(--c-primary-rgb), 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.hex-data summary:hover {
+  background: rgba(var(--c-primary-rgb), 0.08);
+}
+
+.hex-content {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  background: rgba(var(--c-primary-rgb), 0.02);
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  word-break: break-all;
+  white-space: pre-wrap;
+  color: rgba(var(--c-primary-rgb), 0.8);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Decoded Product Data */
+.decoded-product-data {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.decoded-product-data h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+/* No Content Message */
+.no-content {
+  text-align: center;
+  padding: 2rem;
+  color: rgba(var(--c-primary-rgb), 0.6);
+  font-style: italic;
+}
+
+/* Error State */
+.error-message {
+  color: rgba(var(--c-primary-rgb), 0.8);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Info Section */
+.rfid-info {
+  padding: var(--marge-primary) 0;
+  background: rgba(var(--c-primary-rgb), 0.02);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(var(--c-primary-rgb), 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(var(--c-primary-rgb), 0.1);
+}
+
+.info-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 1rem;
+  color: #ffd700;
+}
+
+.info-card h3 {
+  font-family: var(--font-family-heading);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--c-primary);
+}
+
+.info-card p {
+  color: rgba(var(--c-primary-rgb), 0.8);
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+  
+  .product-meta,
+  .identity-meta {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+  }
+  
+  .scan-card,
+  .search-card {
+    padding: 2rem 1rem;
+  }
+  
+  .identity-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .multimap-details {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rfid-hero-title {
+    font-size: 2rem;
+  }
+  
+  .scan-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -31,6 +31,18 @@ class Utils {
     return removeClickListener
 
   }
+  static getUrlParams() {
+    const params = new URLSearchParams(window.location.search)
+    const paramObj = {}
+    for (const [key, value] of params.entries()) {
+      paramObj[key] = value
+    }
+    return paramObj
+  }
+  static getUrlParam(key) {
+    const params = new URLSearchParams(window.location.search)
+    return params.get(key)
+  }
 }
 
 const qs = Utils.qs
