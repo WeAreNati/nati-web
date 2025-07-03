@@ -359,20 +359,23 @@ html, body {
 }
 
 .header-nav {
-  font-size: .75em;
+  font-size: .8em;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: .15em;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .header-nav ul {
   display: flex;
   align-items: center;
-  gap: 4.5em;
+  gap: 2.5em;
 }
 
 .header-logo {
-  width: calc(200px + 50 * (100vw - 320px) / 1080);
+  width: calc(175px + 40 * (100vw - 320px) / 1080);
   overflow: visible;
   display: block;
 }
@@ -1357,7 +1360,7 @@ html, body {
   }
 
   .header-nav ul {
-    gap: 3em;
+    gap: 2.5em;
   }
 
   .header-social {
@@ -1385,7 +1388,7 @@ html, body {
   }
 
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
   
   .header-line {
     display: none;
@@ -1396,7 +1399,7 @@ html, body {
   }
 
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
 
   .header {
     justify-content: space-between;

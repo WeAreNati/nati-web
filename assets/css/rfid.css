@@ -14,8 +14,11 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.rfid-hero-bg {
   background: linear-gradient(135deg, rgba(var(--bg-body-rgb), 0.95) 0%, rgba(var(--bg-body-rgb), 0.8) 100%),
-              url('../img/naticoin-bg-hero.webp') center/cover;
+              url(../img/naticoin-bg-hero.webp) center/cover;
 }
 
 .rfid-hero-content {

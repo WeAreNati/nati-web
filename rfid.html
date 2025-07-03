@@ -39,35 +39,56 @@
             </a>
         </div>
 
-        <div class="header-line">
-            <svg viewBox="0 0 11.32 6.14">
-                <use href="./assets/img/sprites.svg#arrow-left"></use>
-            </svg>
-        </div>
-
         <nav class="header-nav">
             <ul>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#how">Buy</a></li>
-                <li><a href="index.html#verus">Verus</a></li>
-                <li><a href="index.html#tokenomics">Tokenomics</a></li>
-                <li><a href="index.html#roadmap">Roadmap</a></li>
                 <li><a href="store.html">Store</a></li>
                 <li><a href="rfid.html" class="active">Verify</a></li>
                 <li><a href="https://medium.com/@illuminaticoin.io" rel="noopener noreferrer" target="_blank">Medium</a></li>
-                <li class="li-social"><a href="https://t.me/naticoincommunity" rel="noopener noreferrer" target="_blank">Telegram</a></li>
-                <li class="li-social"><a href="https://discord.gg/7VbGkRKD9f" rel="noopener noreferrer" target="_blank">Discord</a></li>
-                <li class="li-social"><a href="https://x.com/NATI_OWL" rel="noopener noreferrer" target="_blank">Twitter / 𝕏</a></li>
-                <li class="li-social"><a href="https://www.facebook.com/illuminaticoin.io" rel="noopener noreferrer" target="_blank">Facebook</a></li>
             </ul>
         </nav>
 
-        <div class="header-hamburger">
-            <div>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+        <ul class="header-social">
+            <li>
+                <a aria-label="Twitter / 𝕏" href="https://x.com/NATI_OWL" rel="noopener noreferrer" target="_blank">
+                    <svg viewBox="0 0 39 39">
+                        <use href="./assets/img/sprites.svg#twitter-x"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a aria-label="Telegram" href="https://t.me/naticoincommunity" rel="noopener noreferrer" target="_blank">
+                    <svg viewBox="0 0 39 39">
+                        <use href="./assets/img/sprites.svg#telegram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a aria-label="Discord" href="https://discord.gg/HUnh7TPNAe" rel="noopener noreferrer" target="_blank">
+                    <svg viewBox="0 0 127.14 96.36">
+                        <use href="./assets/img/sprites.svg#discord"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+        <div class="header-right">
+            <button aria-label="Cart" class="btn cart-btn" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="m1 1 4 4 2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-count">0</span>
+            </button>
+            <button aria-label="Menu" class="btn btn-nav" type="button">
+                <svg viewBox="0 0 100 100">
+                    <path class="l-1" d="M0,42h62c13,0,6,26-4,16L35,35"></path>
+                    <path name="l-2" d="M0,50h70"></path>
+                    <path class="l-3" d="M0,58h62c13,0,6-26-4-16L35,65"></path>
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -84,6 +105,10 @@
                         Authentic IlluminatiCoin merchandise verified on the Verus Protocol blockchain
                     </p>
                 </div>
+            </div>
+            
+            <div class="bg">
+                <div class="rfid-hero-bg"></div>
             </div>
         </section>
 
