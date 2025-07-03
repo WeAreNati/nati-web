@@ -379,11 +379,11 @@ class RFIDVerifier {
     const searchContainer = Utils.qs('#identity-search-interface');
     
     if (scanContainer) {
-      scanContainer.style.display = 'block';
+      scanContainer.style.display = 'flex';
     }
     
     if (searchContainer) {
-      searchContainer.style.display = 'block';
+      searchContainer.style.display = 'flex';
     }
   }
 

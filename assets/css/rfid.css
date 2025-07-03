@@ -52,12 +52,23 @@
   min-height: 60vh;
 }
 
+/* Interfaces Container for Side-by-Side Layout */
+.interfaces-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  min-height: 400px;
+  flex-wrap: wrap;
+}
+
 /* Scan Interface */
 .scan-interface {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
+  flex: 1;
+  max-width: 500px;
 }
 
 .scan-card {
@@ -133,8 +144,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
-  margin-top: 2rem;
+  flex: 1;
+  max-width: 600px;
 }
 
 .search-card {
@@ -584,6 +595,16 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .interfaces-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .scan-interface,
+  .identity-search-interface {
+    max-width: 100%;
+  }
+  
   .input-group {
     flex-direction: column;
   }

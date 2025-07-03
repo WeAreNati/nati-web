@@ -89,49 +89,52 @@
 
         <section class="rfid-verification">
             <div class="container">
-                <!-- Scanning Interface (shown when no URL params) -->
-                <div id="scan-interface" class="scan-interface" style="display: none;">
-                    <div class="scan-card">
-                        <div class="scan-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M9,2V5H7V4A1,1 0 0,0 6,3H4A1,1 0 0,0 3,4V6A1,1 0 0,0 4,7H5V9H2V7A3,3 0 0,1 5,4H7A3,3 0 0,1 10,7V9H7V2M22,9V7A3,3 0 0,0 19,4H17A3,3 0 0,0 14,7V9H17V2H22V5H20V4A1,1 0 0,1 19,3H17A1,1 0 0,1 18,4V6A1,1 0 0,1 17,7H19V9H22M22,17V19A3,3 0 0,1 19,22H17A3,3 0 0,1 14,19V17H17V22H22V19H20V20A1,1 0 0,0 19,21H17A1,1 0 0,0 18,20V18A1,1 0 0,0 17,17H19V19H22V17M10,17V19A3,3 0 0,0 7,22H5A3,3 0 0,0 2,19V17H5V22H10V19H8V20A1,1 0 0,1 7,21H5A1,1 0 0,1 6,20V18A1,1 0 0,1 7,17H5V19H2V17"/>
-                            </svg>
-                        </div>
-                        <h2>Scan Your RFID Tag</h2>
-                        <p>Hold your phone near the RFID tag on your IlluminatiCoin merchandise to verify its authenticity.</p>
-                        
-                        <div class="manual-input">
-                            <h3>Or Enter Verification URL Manually</h3>
-                            <div class="input-group">
-                                <input type="text" id="manual-rfid-input" placeholder="Paste verification URL here..." />
-                                <button id="verify-btn" class="btn btn-primary">Verify</button>
+                <!-- Interfaces Container for Side-by-Side Layout -->
+                <div class="interfaces-container">
+                    <!-- Scanning Interface (shown when no URL params) -->
+                    <div id="scan-interface" class="scan-interface" style="display: none;">
+                        <div class="scan-card">
+                            <div class="scan-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M9,2V5H7V4A1,1 0 0,0 6,3H4A1,1 0 0,0 3,4V6A1,1 0 0,0 4,7H5V9H2V7A3,3 0 0,1 5,4H7A3,3 0 0,1 10,7V9H7V2M22,9V7A3,3 0 0,0 19,4H17A3,3 0 0,0 14,7V9H17V2H22V5H20V4A1,1 0 0,1 19,3H17A1,1 0 0,1 18,4V6A1,1 0 0,1 17,7H19V9H22M22,17V19A3,3 0 0,1 19,22H17A3,3 0 0,1 14,19V17H17V22H22V19H20V20A1,1 0 0,0 19,21H17A1,1 0 0,0 18,20V18A1,1 0 0,0 17,17H19V19H22V17M10,17V19A3,3 0 0,0 7,22H5A3,3 0 0,0 2,19V17H5V22H10V19H8V20A1,1 0 0,1 7,21H5A1,1 0 0,1 6,20V18A1,1 0 0,1 7,17H5V19H2V17"/>
+                                </svg>
+                            </div>
+                            <h2>Scan Your RFID Tag</h2>
+                            <p>Hold your phone near the RFID tag on your IlluminatiCoin merchandise to verify its authenticity.</p>
+                            
+                            <div class="manual-input">
+                                <h3>Or Enter Verification URL Manually</h3>
+                                <div class="input-group">
+                                    <input type="text" id="manual-rfid-input" placeholder="Paste verification URL here..." />
+                                    <button id="verify-btn" class="btn btn-primary">Verify</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Verus Identity Search Interface -->
-                <div id="identity-search-interface" class="identity-search-interface">
-                    <div class="search-card">
-                        <div class="search-icon">
-                            <svg viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
-                            </svg>
-                        </div>
-                        <h2>Search Verus Identity</h2>
-                        <p>Enter a Verus ID (I-address) or identity name to lookup and decode VDXF data from the blockchain.</p>
-                        
-                        <div class="identity-input">
-                            <div class="input-group">
-                                <input type="text" id="identity-search-input" placeholder="Enter Verus ID (e.g., i5eFCADv8yxPLk9FNPQSzkx3UoHdgisYjb or illuminati5ca8.123@)" maxlength="500" pattern="[a-zA-Z0-9@.]+" autocomplete="off" autocorrect="off" spellcheck="false" />
-                                <button id="search-identity-btn" class="btn btn-primary">Search</button>
+                    <!-- Verus Identity Search Interface -->
+                    <div id="identity-search-interface" class="identity-search-interface">
+                        <div class="search-card">
+                            <div class="search-icon">
+                                <svg viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"/>
+                                </svg>
                             </div>
-                            <div class="search-examples">
-                                <p>Examples:</p>
-                                <ul>
-                                    <li><code>i5eFCADv8yxPLk9FNPQSzkx3UoHdgisYjb</code> (I-address)</li>
-                                    <li><code>illuminati5ca8.123@</code> (Identity name)</li>
-                                </ul>
+                            <h2>Search Verus Identity</h2>
+                            <p>Enter a Verus ID (I-address) or identity name to lookup and decode VDXF data from the blockchain.</p>
+                            
+                            <div class="identity-input">
+                                <div class="input-group">
+                                    <input type="text" id="identity-search-input" placeholder="Enter Verus ID (e.g., i5eFCADv8yxPLk9FNPQSzkx3UoHdgisYjb or illuminati5ca8.123@)" maxlength="500" pattern="[a-zA-Z0-9@.]+" autocomplete="off" autocorrect="off" spellcheck="false" />
+                                    <button id="search-identity-btn" class="btn btn-primary">Search</button>
+                                </div>
+                                <div class="search-examples">
+                                    <p>Examples:</p>
+                                    <ul>
+                                        <li><code>i5eFCADv8yxPLk9FNPQSzkx3UoHdgisYjb</code> (I-address)</li>
+                                        <li><code>illuminati5ca8.123@</code> (Identity name)</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
