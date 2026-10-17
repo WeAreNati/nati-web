@@ -105,6 +105,9 @@ class Nav {
 
     btnNav.addEventListener('click', () => this.toggle())
     Utils.detectClickOutside(header, () => this.close())
+    qsa('.header-nav a').forEach(link => {
+      link.addEventListener('click', () => this.close())
+    })
 
   }
   toggle () {
@@ -211,19 +214,6 @@ gsap.fromTo('.how-bg', { y: '-20%' }, { y: '20%',
   }
 })
 
-/* Load iframe */
-
-const iframe = qs('#uniswap-iframe')
-const iframe_load = ScrollTrigger.create({
-  trigger: iframe,
-  start: 'top bottom',
-  onEnter() {
-    iframe.setAttribute('src', iframe.dataset.src)
-    iframe.scrollIntoView(false)
-    iframe_load.kill()
-  }
-})
-
 /** Tokenomics */
 
 gsap.fromTo('.token-triangle-svg svg', { width: '0%', opacity: 0 }, { width: '100%', opacity: .5,
@@ -281,3 +271,68 @@ gsap.fromTo('.road-bg', { y: '-20%' }, { y: '20%',
 })
 
 // GSAP End
+
+/** Lodge board */
+
+class Board {
+  constructor () {
+    this.tabs = qsa('.phase-rail [role="tab"]')
+    this.panels = qsa('.phase-block')
+    this.lockUntil = 0
+
+    this.tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => {
+        const panel = document.getElementById(tab.getAttribute('aria-controls'))
+        this.lockUntil = Date.now() + 900
+        this.select(tab)
+        if (panel && typeof lenis !== 'undefined' && lenis.scrollTo) {
+          lenis.scrollTo(panel, { offset: -110 })
+        } else if (panel) {
+          panel.scrollIntoView()
+        }
+      })
+      tab.addEventListener('keydown', event => this.onKey(event, index))
+    })
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        if (Date.now() < this.lockUntil) return
+        const visible = entries.filter(entry => entry.isIntersecting)
+        if (!visible.length) return
+        visible.sort((a, b) => Math.abs(a.boundingClientRect.top - 120) - Math.abs(b.boundingClientRect.top - 120))
+        const tab = qs('.phase-rail [aria-controls="' + visible[0].target.id + '"]')
+        if (tab) this.select(tab)
+      }, { rootMargin: '-110px 0px -55% 0px' })
+
+      this.panels.forEach(panel => observer.observe(panel))
+    }
+
+    qsa('[data-drawer]').forEach(button => {
+      button.addEventListener('click', () => {
+        const panel = document.getElementById(button.getAttribute('aria-controls'))
+        const open = button.getAttribute('aria-expanded') === 'true'
+        button.setAttribute('aria-expanded', open ? 'false' : 'true')
+        if (panel) panel.hidden = open
+      })
+    })
+  }
+  select (tab) {
+    this.tabs.forEach(item => {
+      item.setAttribute('aria-selected', item === tab ? 'true' : 'false')
+    })
+  }
+  onKey (event, index) {
+    let next = index
+    if (event.key === 'ArrowRight') next = (index + 1) % this.tabs.length
+    else if (event.key === 'ArrowLeft') next = (index - 1 + this.tabs.length) % this.tabs.length
+    else if (event.key === 'Home') next = 0
+    else if (event.key === 'End') next = this.tabs.length - 1
+    else return
+
+    event.preventDefault()
+    this.tabs[next].focus()
+    this.tabs[next].click()
+  }
+}
+
+const $Board = new Board()
